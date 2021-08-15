@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Card = ({image, title, price}) => (
     <div className={styles.card}>
         <div className={styles.donutImg}>
-            <Image src={image} alt="first donut"/>
+            <Image src={image} alt={title}/>
         </div>
         <div className={styles.donutSummary}>
             <span className={styles.donutTitle}>{title}</span>

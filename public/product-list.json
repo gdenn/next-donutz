@@ -2,6 +2,51 @@
     {
         "title": "chocalate shipnut",
         "price": "1.99",
-        "image": "donuts.jpg"
+        "image": "donuts1.jpg"
+    },
+    {
+        "title": "strawberry vanilla",
+        "price": "1.80",
+        "image": "donuts2.jpg"
+    },
+    {
+        "title": "mango wonder",
+        "price": "1.55",
+        "image": "donuts3.jpg"
+    },
+    {
+        "title": "crema peek",
+        "price": "2.55",
+        "image": "donuts4.jpg"
+    },
+    {
+        "title": "chocolate wonder",
+        "price": "1.99",
+        "image": "donuts5.jpg"
+    },
+    {
+        "title": "strawberry miracle",
+        "price": "2.99",
+        "image": "donuts6.jpg"
+    },
+    {
+        "title": "cream mountain",
+        "price": "1.80",
+        "image": "donuts7.jpg"
+    },
+    {
+        "title": "vanilla surprise",
+        "price": "2.99",
+        "image": "donuts8.jpg"
+    },
+    {
+        "title": "chocolate surprise",
+        "price": "3.00",
+        "image": "donuts9.jpg"
+    },
+    {
+        "title": "strawberry peek",
+        "price": "1.25",
+        "image": "donuts10.jpg"
     }
 ]
