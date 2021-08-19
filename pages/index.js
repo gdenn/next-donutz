@@ -15,14 +15,16 @@ export default function Home({ priceList }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="h-20 bg-blue-500 shadow-lg">
+      <header className="h-20 bg-blue-500 shadow-lg">
 
-      </div>
+      </header>
 
-      <main className="container my-8 mx-auto px-4 md:px-12">
-        <CardView>
-          {priceList.map((priceListItem) => <Card key={`card-${priceListItem.id}`} {...priceListItem}/>)}
-        </CardView>
+      <main className="bg-gray-100">
+        <div className="container py-8 mx-auto px-4 md:px-12">
+          <CardView>
+            {priceList.map((priceListItem) => <Card key={`card-${priceListItem.id}`} {...priceListItem}/>)}
+          </CardView>
+        </div>
       </main>
 
       <footer className="flex flex-col justify-center h-20 bg-gray-600">
