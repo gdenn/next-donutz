@@ -8,21 +8,21 @@ import Card from '../components/Card'
 
 
 export default function Home({ priceList }) {
+ 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>NextJs Donuts</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.header}>
+      <div className="h-20 bg-blue-500 shadow-lg">
 
       </div>
-      <main className={styles.main}>
+
+      <main className="container my-8 mx-auto px-4 md:px-12">
         <CardView>
-          { priceList.map(({ title, price, image }, index) => (
-              <Card key={`card${index}`} image={require(`../public/donuts/${image}`)} price={price} title={title}/>
-            ))}
+          {priceList.map((priceListItem) => <Card key={`card-${priceListItem.id}`} {...priceListItem}/>)}
         </CardView>
       </main>
 
