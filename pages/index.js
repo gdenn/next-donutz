@@ -5,6 +5,12 @@ import priceList from '../public/product-list.json'
 import CardView from '../components/CardView'
 import Card from '../components/Card'
 
+import Header from '../components/Header'
+import SearchBar from '../components/SearchBar'
+import ShooppingCartButton from '../components/ShoppingCartButton'
+import MainContent from '../components/MainContent/MainContent'
+import Footer from '../components/Footer/Footer'
+
 
 export default function Home({ priceList }) {
  
@@ -15,22 +21,18 @@ export default function Home({ priceList }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="h-20 bg-blue-500 shadow-lg">
+      <Header>
+            <SearchBar/>
+            <ShooppingCartButton price={5.99}/>
+      </Header>
 
-      </header>
-
-      <main className="bg-gray-100">
-        <div className="container py-8 mx-auto px-4 md:px-12">
-          <CardView>
+      <MainContent>
+        <CardView>
             {priceList.map((priceListItem) => <Card key={`card-${priceListItem.id}`} {...priceListItem}/>)}
           </CardView>
-        </div>
-      </main>
+      </MainContent>
 
-      <footer className="flex flex-col justify-center h-20 bg-gray-600">
-        <span className="font-sans text-lg text-white mx-auto">Built with NextJS & Tailwind</span>
-        <span className="font-sans text-sm font-light text-gray-300 mx-auto">© Dennis Groß 2021</span>
-      </footer>
+      <Footer/>
     </div>
   )
 }
