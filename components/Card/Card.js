@@ -1,10 +1,13 @@
 import Image from 'next/image'
+import React, { useState } from 'react';
 
-const Card = ({image, title, price, id}) => {
+const Card = ({image, title, price, id, onClick}) => {
 
-    const onAddButtonClick = () => {
-        console.log("added item with id ", id, " to cart")
-    }
+    const [amount, setAmount] = useState(1)
+
+    const incrementAmount = () => setAmount(amount + 1)
+
+    const decrementAmount = () => setAmount(amount - 1)
 
     return (
         <article key={`card-${id}`} className="w-full h-auto rounded-lg shadow-lg flex flex-col">
@@ -17,11 +20,11 @@ const Card = ({image, title, price, id}) => {
             </div>
             <div className="flex flex-grow-0 flex-row h-18 justify-items-end align-middle w-full p-4">
                 <div className="flex flex-row place-items-center">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> - </button>
-                    <input className="w-2/12 m-1 h-full text-center appearance-none rounded leading-tight focus:outline-none focus:shadow-outline"></input>
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> + </button>
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={decrementAmount}> - </button>
+                    <input className="w-2/12 m-1 h-full text-center appearance-none rounded leading-tight focus:outline-none focus:shadow-outline" value={amount}/>
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={incrementAmount}> + </button>
                 </div>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded"> Buy </button>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded" onClick={onClick}> Add </button>
             </div>
         </article>
     )
