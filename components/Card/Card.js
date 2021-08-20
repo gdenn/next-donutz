@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react';
 
-const Card = ({image, title, price, id, onClick}) => {
+const Card = ({image, title, price, id, onValueChanged}) => {
 
     const [amount, setAmount] = useState(1)
 
@@ -9,10 +9,12 @@ const Card = ({image, title, price, id, onClick}) => {
 
     const decrementAmount = () => setAmount(amount - 1)
 
+    const onClick = () => amount > 0 && onValueChanged(amount)
+
     return (
         <article key={`card-${id}`} className="w-full h-auto rounded-lg shadow-lg flex flex-col">
             <span className="m-2 border-2 h-64 w-auto relative">
-                <Image src={image} layout="fill" objectFit="cover" alt="" className="rounded-md "/>
+                <Image src={image} layout="fill" objectFit="cover" alt="" className="rounded-md"/>
             </span>
             <div className="flex flex-grow-0 flex-row h-8 justify-between place-items-center align-middle w-full p-4">
                 <span className="font-mono font-normal text-xl text-gray-800">{title}</span>
