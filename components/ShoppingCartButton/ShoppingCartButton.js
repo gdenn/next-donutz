@@ -6,6 +6,7 @@ import NextLink from 'next/link'
 
 import { useState } from "react"
 import classNames from "classnames"
+import Button from "../Button"
 
 const ShooppingCartButton = ({price, orders}) => {
 
@@ -14,12 +15,10 @@ const ShooppingCartButton = ({price, orders}) => {
     return (
         <div className="flex flex-col">
             <NextLink href="/checkout">
-                <button onMouseEnter={() => setOrdersHidden(false)}
-                        onMouseLeave={() => setOrdersHidden(true)}
-                        className="flex flex-row place-items-center hover:border-transparent hover:bg-white hover:text-blue-500 bg-transparent text-white font-semibold py-2 px-4 border border-white rounded">
+                <Button secondary onMouseEnter={() => setOrdersHidden(false)} onMouseLeave={() => setOrdersHidden(true)}>
                     <FontAwesomeIcon className="w-6 h-6 mx-2" icon={faShoppingCart}/>
                     <span className="mx-2 text-xl">{price} €</span>
-                </button>
+                </Button>
             </NextLink>
             <div onMouseEnter={() => setOrdersHidden(false)} 
                  onMouseLeave={() => setOrdersHidden(true)} 
