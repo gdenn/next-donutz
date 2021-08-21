@@ -5,15 +5,13 @@ import priceList from '../public/product-list.json'
 import CardView from '../components/CardView'
 import Card from '../components/Card'
 
-import Header from '../components/Header'
 import SearchBar from '../components/SearchBar'
 import ShooppingCartButton from '../components/ShoppingCartButton'
-import MainContent from '../components/MainContent/MainContent'
-import Footer from '../components/Footer/Footer'
 import { useState } from 'react'
+import Layout from '../components/Layout'
 
 
-export default function Home({ priceList }) {
+const Home = ({ priceList }) => {
 
   const [orders, setOrders] = useState([])
   const [totalPrice, setTotalPrice] = useState(0)
@@ -24,30 +22,28 @@ export default function Home({ priceList }) {
   }
  
   return (
-    <div>
-      <Head>
-        <title>NextJs Donuts</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Header>
-          <SearchBar/>
-          <ShooppingCartButton price={totalPrice.toFixed(2)} orders={orders}/>
-      </Header>
-
-      <MainContent>
-        <CardView>
+    <Layout>
+      {{
+        header: (
+          <>
+            <SearchBar/>
+            <ShooppingCartButton price={totalPrice.toFixed(2)} orders={orders}/>
+          </>
+        ),
+        main: (
+          <CardView>
             {priceList.map((priceListItem) => (
               <Card key={`card-${priceListItem.id}`} 
                     {...priceListItem}
                     onValueChanged={(amount) => addOrder(priceListItem.id, amount, priceListItem.price, priceListItem.title, priceListItem.image)}/>
             ))}
           </CardView>
-      </MainContent>
-
-      <Footer/>
-    </div>
+        )
+      }}
+    </Layout>
   )
 }
 
-export const getStaticProps = async (context) => ({ "props": { "priceList": priceList } });
+export const getStaticProps = async (context) => ({ "props": { "priceList": priceList } })
+
+export default Home

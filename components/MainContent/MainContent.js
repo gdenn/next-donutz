@@ -1,7 +1,7 @@
 
 
 const MainContent = ({children}) => (
-    <main className="bg-gray-100">
+    <main className="bg-gray-100 flex-grow">
         <div className="container py-8 mx-auto px-4 md:px-12">
             {children}
         </div>
