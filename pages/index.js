@@ -4,6 +4,7 @@ import SearchBar from '../components/SearchBar'
 import ShooppingCartButton from '../components/ShoppingCartButton'
 import Layout from '../components/Layout'
 import ProductCardView from '../components/ProductCardVIew'
+import BreadCrumbs, { ActiveLink } from '../components/BreadCrumbs'
 
 
 const Home = ({ priceList }) => (
@@ -16,7 +17,12 @@ const Home = ({ priceList }) => (
         </>
       ),
       main: (
-        <ProductCardView priceList={priceList}/>
+        <>
+          <BreadCrumbs>
+            <ActiveLink title="Product Overview"/>
+          </BreadCrumbs>
+          <ProductCardView priceList={priceList}/>
+        </>
       )
     }}
   </Layout>

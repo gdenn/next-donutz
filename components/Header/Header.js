@@ -1,9 +1,9 @@
 
 
 const Header = ({children}) => (
-    <header className="h-20 bg-blue-500 shadow-lg flex-grow-0">
-        <div className="container py-4 mx-auto px-4 md:px-12">
-          <div className="flex flex-row justify-between">
+    <header className="h-16 py-2 bg-blue-500 shadow-lg flex-grow-0">
+        <div className="container mx-auto px-12">
+          <div className="flex flex-row justify-between place-items-center">
               {children}
           </div>
         </div>

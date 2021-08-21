@@ -13,7 +13,7 @@ const OrderList = () => {
 
     return (
         <>
-            <span className="uppercase font-mono font-semibold text-xl">Your Orders</span>
+            <span className="uppercase font-mono font-semibold text-xl px-5">Your Orders</span>
             <ListView className="w-4/6">
                 {orders.map(order => (
                     <ListItem key={`item-${order.id}`}>

@@ -1,9 +1,9 @@
 import classNames from "classnames"
 
 
-const BASE_CLASSES = "flex flex-row place-items-center rounded py-2 px-4 border font-bold "
-const SECONDARY_CLASSES = "hover:border-transparent hover:bg-white hover:text-blue-500 bg-transparent text-white border-white"
-const PRIMARY_CLASSES = "bg-blue-500 hover:bg-blue-700 text-white"
+const BASE_CLASSES = "flex flex-row place-items-center rounded py-2 px-4 font-bold "
+const SECONDARY_CLASSES = "border hover:border-transparent hover:bg-white hover:text-blue-500 bg-transparent text-white border-white"
+const PRIMARY_CLASSES = "border bg-blue-500 hover:bg-blue-700 text-white"
 
 const Button = ({
     children, 
