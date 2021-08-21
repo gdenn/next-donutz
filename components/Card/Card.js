@@ -1,16 +1,11 @@
 import Image from 'next/image'
-import React, { useState } from 'react';
+import React from 'react';
 import Button from '../Button/Button';
+import useCard from './useCard';
 
 const Card = ({image, title, price, id, onValueChanged}) => {
 
-    const [amount, setAmount] = useState(1)
-
-    const incrementAmount = () => setAmount(amount + 1)
-
-    const decrementAmount = () => setAmount(amount - 1)
-
-    const onClick = () => amount > 0 && onValueChanged(amount)
+    const {amount, incrementAmount, decrementAmount, onClick} = useCard(onValueChanged)
 
     return (
         <article key={`card-${id}`} className="w-full h-auto rounded-lg shadow-lg flex flex-col">

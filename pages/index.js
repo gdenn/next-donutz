@@ -1,26 +1,17 @@
-import Head from 'next/head'
-
 import priceList from '../public/product-list.json'
 
 import CardView from '../components/CardView'
 import Card from '../components/Card'
-
 import SearchBar from '../components/SearchBar'
 import ShooppingCartButton from '../components/ShoppingCartButton'
-import { useState } from 'react'
 import Layout from '../components/Layout'
+import useOrders from '../hooks/useOrders'
 
 
 const Home = ({ priceList }) => {
 
-  const [orders, setOrders] = useState([])
-  const [totalPrice, setTotalPrice] = useState(0)
+  const {addOrder, totalPrice, orders} = useOrders()
 
-  const addOrder = (id, amount, price, title, image) => {
-    setOrders([...orders, { id: id, amount: amount, price: price, title: title, image: image }])
-    setTotalPrice(totalPrice + parseFloat(price))
-  }
- 
   return (
     <Layout>
       {{
