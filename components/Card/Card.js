@@ -5,7 +5,7 @@ import useCard from './useCard';
 
 const Card = ({image, title, price, id, onValueChanged}) => {
 
-    const {amount, incrementAmount, decrementAmount, onClick} = useCard(onValueChanged)
+    const {amount, incrementAmount, decrementAmount, onClick, onInputFieldValueChanged} = useCard(onValueChanged)
 
     return (
         <article key={`card-${id}`} className="w-full h-auto rounded-lg shadow-lg flex flex-col">
@@ -19,7 +19,7 @@ const Card = ({image, title, price, id, onValueChanged}) => {
             <div className="flex flex-grow-0 flex-row h-18 justify-items-end align-middle w-full p-4">
                 <div className="flex flex-row place-items-center">
                     <Button primary onClick={decrementAmount}>-</Button>
-                    <input className="w-2/12 m-1 h-full text-center appearance-none rounded leading-tight focus:outline-none focus:shadow-outline" value={amount}/>
+                    <input className="w-2/12 m-1 h-full text-center appearance-none rounded leading-tight focus:outline-none focus:shadow-outline" value={amount} onChange={onInputFieldValueChanged}/>
                     <Button primary onClick={incrementAmount}>+</Button>
                 </div>
                 <Button primary onClick={onClick}>Add</Button>
