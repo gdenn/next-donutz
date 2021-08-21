@@ -7,10 +7,10 @@ const useOrders = () => {
 
     const addOrder = (id, amount, price, title, image) => {
         setOrders([...orders, { id: id, amount: amount, price: price, title: title, image: image }])
-        setTotalPrice(totalPrice + parseFloat(price))
+        setTotalPrice(totalPrice + amount * parseFloat(price))
     }
 
-    return { addOrder: addOrder, orders: orders, totalPrice: totalPrice}
+    return { addOrder: addOrder, orders: orders, totalPrice: totalPrice, roundedTotalPrice: totalPrice.toFixed(2)}
 }
 
 export default useOrders

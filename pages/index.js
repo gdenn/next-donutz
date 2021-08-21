@@ -10,16 +10,13 @@ import ProductCardView from '../components/ProductCardVIew'
 
 
 const Home = ({ priceList }) => {
-
-  const {addOrder, totalPrice, orders} = useOrders()
-
   return (
     <Layout>
       {{
         header: (
           <>
             <SearchBar/>
-            <ShooppingCartButton price={totalPrice.toFixed(2)} orders={orders}/>
+            <ShooppingCartButton/>
           </>
         ),
         main: (

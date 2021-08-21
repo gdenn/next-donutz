@@ -1,10 +1,10 @@
+import useOrders from "../../hooks/useOrders"
 import Card from "../Card"
 import CardView from "../CardView"
-import useProductCardView from "./useProductCardView"
 
 const ProductCardView = ({priceList}) => {
 
-    const { addOrder } =  useProductCardView()
+    const { addOrder } =  useOrders()
     
     return (
         <CardView>

@@ -7,17 +7,20 @@ import NextLink from 'next/link'
 import { useState } from "react"
 import classNames from "classnames"
 import Button from "../Button"
+import useOrders from "../../hooks/useOrders"
 
-const ShooppingCartButton = ({price, orders}) => {
+const ShooppingCartButton = () => {
 
     const [ordersHidden, setOrdersHidden] = useState(true)
+
+    const {orders, roundedTotalPrice} = useOrders()
 
     return (
         <div className="flex flex-col">
             <NextLink href="/checkout">
                 <Button secondary onMouseEnter={() => setOrdersHidden(false)} onMouseLeave={() => setOrdersHidden(true)}>
                     <FontAwesomeIcon className="w-6 h-6 mx-2" icon={faShoppingCart}/>
-                    <span className="mx-2 text-xl">{price} €</span>
+                    <span className="mx-2 text-xl">{roundedTotalPrice} €</span>
                 </Button>
             </NextLink>
             <div onMouseEnter={() => setOrdersHidden(false)} 
