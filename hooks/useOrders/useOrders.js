@@ -6,7 +6,18 @@ const useOrders = () => {
     const {orders, setOrders, totalPrice, setTotalPrice} = useAppContext()
 
     const addOrder = (id, amount, price, title, image) => {
-        setOrders([...orders, { id: id, amount: amount, price: price, title: title, image: image }])
+
+        const newOrders = [...orders]
+
+        const matchingOrder = newOrders.find(order => order.id === id)
+
+        if (matchingOrder) {
+            matchingOrder.amount += amount
+        } else {
+            newOrders.push({id: id, amount: amount, price: price, title: title, image: image})
+        }
+
+        setOrders(newOrders)
         setTotalPrice(totalPrice + amount * parseFloat(price))
     }
 

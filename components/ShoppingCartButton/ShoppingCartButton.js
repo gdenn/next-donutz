@@ -4,14 +4,14 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 import NextLink from 'next/link'
 
-import { useState } from "react"
 import classNames from "classnames"
 import Button from "../Button"
 import useOrders from "../../hooks/useOrders"
+import useShoppingCartButton from "./useShoppingCartButton"
 
 const ShooppingCartButton = () => {
 
-    const [ordersHidden, setOrdersHidden] = useState(true)
+    const {ordersHidden, setOrdersHidden} = useShoppingCartButton()
 
     const {orders, roundedTotalPrice} = useOrders()
 
