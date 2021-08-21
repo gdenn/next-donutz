@@ -8,7 +8,7 @@ const Card = ({image, title, price, id, onValueChanged}) => {
     const {amount, incrementAmount, decrementAmount, onClick, onInputFieldValueChanged} = useCard(onValueChanged)
 
     return (
-        <article key={`card-${id}`} className="w-full h-auto rounded-lg shadow-lg flex flex-col">
+        <article key={`card-${id}`} className="w-full h-auto rounded-lg shadow-lg flex flex-col bg-white">
             <span className="m-2 border-2 h-64 w-auto relative">
                 <Image src={image} layout="fill" objectFit="cover" alt="" className="rounded-md"/>
             </span>
