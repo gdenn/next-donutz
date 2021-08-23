@@ -1,6 +1,5 @@
-import useOrders from "../../hooks/useOrders"
-import Card from "../Card"
-import CardView from "../CardView"
+import useOrders from "@/hooks/useOrders"
+import CardView, { Card } from "@/components/CardView"
 
 const ProductCardView = ({priceList}) => {
 

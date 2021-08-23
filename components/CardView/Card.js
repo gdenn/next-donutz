@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import React from 'react';
-import Button from '../Button/Button';
+
+import Button from '@/components/Button';
+
 import useCard from './useCard';
 
-const Card = ({image, title, price, id, onValueChanged}) => {
+export const Card = ({image, title, price, id, onValueChanged}) => {
 
     const {amount, incrementAmount, decrementAmount, onClick, onInputFieldValueChanged} = useCard(onValueChanged)
 
@@ -27,5 +29,3 @@ const Card = ({image, title, price, id, onValueChanged}) => {
         </article>
     )
 }
-
-export default Card
