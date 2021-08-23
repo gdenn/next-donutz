@@ -8,6 +8,7 @@ import classNames from "classnames"
 
 import Button from "@/components/Button"
 import useOrders from "@/hooks/useOrders"
+import ListView, { ListItem } from "@/components/ListView"
 
 import useShoppingCartButton from "./useShoppingCartButton"
 
@@ -30,21 +31,20 @@ const ShooppingCartButton = () => {
                  className={classNames("relative", {"hidden": ordersHidden})}>
 
                 <div className="absolute z-10 block w-96 top-0 right-0">
-                    <ul className="rounded border-solid border-white">
+                    <ListView>
                         {orders.map(({id, amount, price, title, image}) => (
-                            <li key={`item-${id}`} className="flex flex-row h-24 border-solid border hover:scale-110 border-white text-white font-sans bg-blue-500 pr-2 rounded">
+                            <ListItem key={`item-${id}`}>
                                 <div className="relative h-24 w-24">
                                     <Image src={image} layout="fill" objectFit="cover" alt="" className="rounded"/>
                                 </div>
-                                
-                                <div className="flex flex-row h-full justify-around items-center flex-grow">
-                                    <span className="">{title}</span>
-                                    <span>{amount}</span>
-                                    <span>{price}€</span>
+                                <div className="flex flex-row justify-around w-full">
+                                    <span className="self-center">{title}</span>
+                                    <span className="self-center">{amount}</span>
+                                    <span className="self-center">{price}€</span>
                                 </div>
-                            </li>
+                            </ListItem>
                         ))}
-                    </ul>
+                    </ListView>
                 </div>
             </div>
         </div>
