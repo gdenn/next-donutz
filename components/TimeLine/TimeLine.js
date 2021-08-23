@@ -1,6 +1,4 @@
 import { cloneElement } from "react"
-import { TimeLineEntry } from "."
-
 
 const NEXT_ELEMENT_X = 230
 const CIRCLE_X_START = 80

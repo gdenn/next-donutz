@@ -1,9 +1,8 @@
 import Image from "next/image"
-import useOrders from "../../hooks/useOrders"
 
-import ListView from "../ListView/ListView"
-import ListItem from "../ListItem"
-import Button from "../Button"
+import useOrders from "@/hooks/useOrders"
+import ListView, {ListItem} from "@/components/ListView"
+import Button from "@/components/Button"
 
 const OrderList = () => {
 

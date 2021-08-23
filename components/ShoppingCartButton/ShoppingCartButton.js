@@ -5,8 +5,10 @@ import Image from 'next/image'
 import NextLink from 'next/link'
 
 import classNames from "classnames"
-import Button from "../Button"
-import useOrders from "../../hooks/useOrders"
+
+import Button from "@/components/Button"
+import useOrders from "@/hooks/useOrders"
+
 import useShoppingCartButton from "./useShoppingCartButton"
 
 const ShooppingCartButton = () => {
