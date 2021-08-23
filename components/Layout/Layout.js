@@ -1,8 +1,8 @@
-import Head from 'next/head'
+import Head from "next/head"
 
-import Header from '../Header'
-import MainContent from '../MainContent/MainContent'
-import Footer from '../Footer/Footer'
+import Header from "./Header"
+import MainContent from "./MainContent"
+import Footer from "./Footer"
 
 const Layout = ({children}) => {
 

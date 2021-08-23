@@ -1,2 +1,0 @@
-
-export {defaukt} from './MainContent'

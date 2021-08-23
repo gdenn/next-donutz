@@ -1,3 +1,0 @@
-
-
-export {defaukt} from './Footer'
