@@ -1,10 +1,10 @@
 import priceList from '../public/product-list.json'
 
-import SearchBar from '../components/SearchBar'
-import ShooppingCartButton from '../components/ShoppingCartButton'
-import Layout from '../components/Layout'
-import ProductCardView from '../components/ProductCardVIew'
-import BreadCrumbs, { ActiveLink } from '../components/BreadCrumbs'
+import SearchBar from '@/components/SearchBar'
+import ShooppingCartButton from '@/components/ShoppingCartButton'
+import Layout from '@/components/Layout'
+import ProductCardView from '@/components/ProductCardVIew'
+import BreadCrumbs, { ActiveLink } from '@/components/BreadCrumbs'
 
 
 const Home = ({ priceList }) => (

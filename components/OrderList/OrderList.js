@@ -9,8 +9,6 @@ const OrderList = () => {
 
     const {orders} = useOrders()
 
-    console.log("orders: ", orders)
-
     return (
         <>
             <span className="uppercase font-mono font-semibold text-xl px-5">Your Orders</span>

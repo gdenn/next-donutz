@@ -3,7 +3,6 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const BreadCrumbs = ({children}) => {
     
-    console.log(children)
     return (
         <div className="flex flex-row place-items-center h-4 font-mono text-sm mb-8">
             {children && Array.isArray(children)

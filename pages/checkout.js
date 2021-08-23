@@ -1,8 +1,7 @@
-import Layout from '../components/Layout'
-import OrderList from '../components/OrderList'
+import Layout from '@/components//Layout'
+import OrderList from '@/components//OrderList'
 
-import BreadCrumbs, { ActiveLink, BackLink } from '../components/BreadCrumbs'
-import TimeLine, { TimeLineEntry } from '../components/TimeLine'
+import BreadCrumbs, { ActiveLink, BackLink } from '@/components//BreadCrumbs'
 
 
 const Checkout = ({}) => (
