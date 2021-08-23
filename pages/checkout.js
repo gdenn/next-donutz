@@ -2,7 +2,7 @@ import Layout from '../components/Layout'
 import OrderList from '../components/OrderList'
 
 import BreadCrumbs, { ActiveLink, BackLink } from '../components/BreadCrumbs'
-import TimeLine from '../components/TimeLine'
+import TimeLine, { TimeLineEntry } from '../components/TimeLine'
 
 
 const Checkout = ({}) => (
@@ -15,13 +15,8 @@ const Checkout = ({}) => (
           <>
             <BreadCrumbs>
               <BackLink title="Product Overview" linkTo="/"/>
-              <ActiveLink title="Check Order"/>
+              <ActiveLink title="Shopping Cart"/> 
             </BreadCrumbs>
-            <TimeLine steps={[
-              { label: "Product Overview", linkTo: "/"},
-              { label: "Product Overview", active: true},
-              { label: "Shipping", linkTo: "/ship"},
-            ]}/>
             <OrderList/>
           </>
         )
