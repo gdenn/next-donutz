@@ -20,7 +20,7 @@ const ShooppingCartButton = () => {
 
     return (
         <div className="flex flex-col">
-            <NextLink href="/checkout">
+            <NextLink href="/shopping_cart">
                 <Button secondary onMouseEnter={() => setOrdersHidden(false)} onMouseLeave={() => setOrdersHidden(true)}>
                     <FontAwesomeIcon className="w-6 h-6 mx-2" icon={faShoppingCart}/>
                     <span className="mx-2 text-xl">{totalPrice.toFixed(2)} €</span>

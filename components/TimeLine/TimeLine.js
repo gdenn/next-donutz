@@ -12,10 +12,11 @@ const TimeLine = ({children}) => {
     let lineX2 = LINE_X2_START
 
     return (
-        <div className="container flex justify-center">
-            <div className="mx-auto block">
-                <svg version="1.1" baseProfile="full" width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-                    {children && children.map((timeLineEntry, idx) => {
+        <div className="container">
+            <div className="w-full flex justify-center">
+                <svg version="1.1" baseProfile="full" width="100%" height="80" xmlns="http://www.w3.org/2000/svg">
+                    <g transform={`translate(0, 10)`}>
+                        {children && children.map((timeLineEntry, idx) => {
 
                         const nextRender = <>
                             {cloneElement(timeLineEntry, {circleX: circleX})}
@@ -27,7 +28,8 @@ const TimeLine = ({children}) => {
                         lineX2 += NEXT_ELEMENT_X
 
                         return nextRender
-                    })}
+                        })}
+                    </g>
                 </svg>
             </div>
         </div>
