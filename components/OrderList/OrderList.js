@@ -6,7 +6,7 @@ import Button from "@/components/Button"
 
 const OrderList = () => {
 
-    const {orders} = useOrders()
+    const {orders, removeOrder} = useOrders()
 
     return (
         <>
@@ -22,7 +22,7 @@ const OrderList = () => {
                             <span className="w-20 self-center">{order.amount}</span>
                             <span className="w-20 self-center">{order.price}€</span>
                         </div>
-                        <Button className="h-10 self-center mx-4" primary>
+                        <Button className="h-10 self-center mx-4" onClick={() => removeOrder(order.id)} primary>
                             <span>Remove</span>
                         </Button>
                     </ListItem>

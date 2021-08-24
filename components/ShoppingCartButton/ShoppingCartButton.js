@@ -16,14 +16,14 @@ const ShooppingCartButton = () => {
 
     const {ordersHidden, setOrdersHidden} = useShoppingCartButton()
 
-    const {orders, roundedTotalPrice} = useOrders()
+    const {orders, totalPrice} = useOrders()
 
     return (
         <div className="flex flex-col">
             <NextLink href="/checkout">
                 <Button secondary onMouseEnter={() => setOrdersHidden(false)} onMouseLeave={() => setOrdersHidden(true)}>
                     <FontAwesomeIcon className="w-6 h-6 mx-2" icon={faShoppingCart}/>
-                    <span className="mx-2 text-xl">{roundedTotalPrice} €</span>
+                    <span className="mx-2 text-xl">{totalPrice.toFixed(2)} €</span>
                 </Button>
             </NextLink>
             <div onMouseEnter={() => setOrdersHidden(false)} 
