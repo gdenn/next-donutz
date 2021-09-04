@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 235 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-125.601,-238.068)">
+        <g id="active" transform="matrix(1,0,0,1,0.23461,197.716)">
+            <g id="circle" transform="matrix(1.07699,0,0,1.04954,-21.5618,-4.0949)">
+                <ellipse cx="243.327" cy="119.245" rx="36.75" ry="36.586" style="fill:rgb(59,130,246);"/>
+            </g>
+            <g id="number-label" transform="matrix(3.39071,0,0,1.7158,-590.315,-73.6377)">
+                <text x="239.967px" y="119.944px" style="font-family:'PTMono-Regular', 'PT Mono', monospace;font-size:17.485px;fill:rgb(241,242,244);">1</text>
+            </g>
+            <g id="title" transform="matrix(1,0,0,1,-110.893,13.0241)">
+                <text x="233.944px" y="49.184px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:30px;fill:rgb(59,130,246);">Product Overview</text>
+            </g>
+        </g>
+    </g>
+</svg>
